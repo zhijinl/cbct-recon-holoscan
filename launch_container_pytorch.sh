@@ -1,17 +1,19 @@
 #! /bin/bash
 ## ---------------------------------------------------------------------------
 ##
-## File: launch_docker.sh for project: CBCT Recon
+## File: launch_docker_pytorch.sh for project: CBCT Recon
 ##
 ## Created by Zhijin Li
-## E-mail:   <zhijinl@nvidia.com>
+## E-mail:   <zhijinl@nvidia.com>   
+## Modified by Teo Le Bihan
+## E-mail:   <teo.le-bihan@epita.fr>
 ##
 ## Started on  Fri Nov 24 11:07:21 2023 Zhijin Li
-## Last update Fri Nov 24 13:54:59 2023 Zhijin Li
+## Last update Fri Jan  26 23:54:00 2023 Teo Le Bihan
 ## ---------------------------------------------------------------------------
 
 
-export NGC_CONTAINER_IMAGE_PATH="agx-pytorch:v0.6.0-dgpu"
+export NGC_CONTAINER_IMAGE_PATH="pytorch-holoscan-sdk-astra:v0.6.0-dgpu"
 
 xhost +local:docker
 
