@@ -27,7 +27,7 @@ docker run -it --rm --net host \
   --runtime=nvidia \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   -v $nvidia_icd_json:$nvidia_icd_json:ro \
-  -v <YOUR WORKSPACE>:/cbct-recon \
+  -v /media/m2/cbct-recon/:/cbct-recon \
   -w /cbct-recon \
   -e NVIDIA_DRIVER_CAPABILITIES=graphics,video,compute,utility,display \
   -e DISPLAY=$DISPLAY \
@@ -35,3 +35,6 @@ docker run -it --rm --net host \
   --cap-add=CAP_SYS_PTRACE \
   --ulimit memlock=-1 \
   ${NGC_CONTAINER_IMAGE_PATH}
+
+
+
