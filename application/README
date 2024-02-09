@@ -1,0 +1,42 @@
+In this folder you will find the main components you need to recreate our application holoscan of cbct reconstruction and see
+the results on a local OHIF viewer.
+
+First we have installed holohub and implemented this application in it.
+https://github.com/nvidia-holoscan/holohub
+We have made a new directory in the holohub/applications directory for our application and put everything that you can find with
+this README in it.
+
+If in the future you want to start this application like the others with the command
+./run launch your_application_name python              (python is added if you have put this application in a directory named python)
+You will need to follow the steps given by the holohub's documentation
+
+You will also need to download the data used for testing this application, you will find the link in the data directory.
+Install it and extract it directly in data, it shoud look like this:
+Ldata/
+ L dicom_templates/
+ L train/
+ L validate/
+
+Build the orthanc docker and start it
+docker run -p 8042:8042 -p 4242:4242 orthanc-image
+
+Then start the OHIF viewer with this command (You may need to create an environment with an anterior version of python):
+./start_monailabel
+
+
+For the next part you can use the container in this git if needed
+./build_image_pytorch.sh
+./launch_container.sh
+
+finally build then start your application, if you've installed as an application of holohub, you can start it with this command
+holohub$ ./run build your_application_name
+holohub$ ./run launch your_application_name python
+
+You can then see your results in your browser at this address:
+http://localhost:8000/ohif/
+
+You can also have details of those studies in this orthanc address:
+http://localhost:8042/app/explorer.html
+
+If you have any questions, please contact:
+teo.le-bihan@epita.fr

@@ -13,7 +13,6 @@ from datetime import datetime
 class ConvertOp(Operator):
     def __init__(self, *args, **kwargs):
         self.dicom_dir_path = os.path.join(PATH,"output/")
-        self.npy_path = os.path.join(PATH,"data/","my_npy_file.npy")
         self.files = []
         super().__init__(*args, **kwargs)
 

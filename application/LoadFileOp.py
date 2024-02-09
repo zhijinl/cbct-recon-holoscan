@@ -13,7 +13,7 @@ from argparse import ArgumentParser
 from PARAM import *
 class LoadFileOp(Operator):
     def __init__(self, *args, **kwargs):
-        self.data =  os.path.join(PATH,"data","0000_sino_clinical_dose.npy")
+        self.data =  os.path.join(PATH,"data", "train","0000_sino_clinical_dose.npy")
         super().__init__(*args, **kwargs)
         
     def setup(self, spec: OperatorSpec):

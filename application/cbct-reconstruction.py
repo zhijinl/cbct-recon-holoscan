@@ -23,7 +23,7 @@ low = False
 logger = logging.getLogger("Denoising")
 logging.basicConfig(level=logging.INFO)
 
-class Denoising(Application):
+class cbct_reconstruction(Application):
     def compose(self):
         # the input path is already in load_op
         load_op = LoadFileOp(self, CountCondition(self, 1), name="load_op")
@@ -45,5 +45,5 @@ class Denoising(Application):
 
 
 if __name__ == "__main__":
-    app = Denoising()
+    app = cbct_reconstruction()
     app.run()

@@ -1,2 +1,2 @@
-PATH = "/cbct-recon/holohub/applications/denoising/python/"
+PATH = "/cbct-recon/holohub/applications/cbct_reconstruction/python/"
 COMPARISON = False
